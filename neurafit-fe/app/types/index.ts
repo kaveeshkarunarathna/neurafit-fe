@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 // Common Props
 export interface BaseProps {
   className?: string;
@@ -13,4 +14,18 @@ export interface HeroSectionProps extends BaseProps {
   secondaryCtaLink?: string;
   heroImage: string;
   heroImageAlt: string;
+}
+// How It Works Section
+export interface Step {
+  stepNumber: number;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  image?: string;
+}
+
+export interface HowItWorksSectionProps extends BaseProps {
+  title: string;
+  subtitle: string;
+  steps: Step[];
 }
