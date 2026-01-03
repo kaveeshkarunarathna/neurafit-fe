@@ -29,3 +29,24 @@ export interface HowItWorksSectionProps extends BaseProps {
   subtitle: string;
   steps: Step[];
 }
+
+// Feature Card & Features Section
+export interface FeatureCardProps extends BaseProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  iconColor?: string;
+}
+
+export interface Feature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  iconColor?: string;
+}
+
+export interface FeaturesSectionProps extends BaseProps {
+  title: string;
+  subtitle: string;
+  features: Feature[];
+}
