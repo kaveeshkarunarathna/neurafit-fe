@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react";
+
 // Common Props
 export interface BaseProps {
   className?: string;
@@ -49,4 +50,24 @@ export interface FeaturesSectionProps extends BaseProps {
   title: string;
   subtitle: string;
   features: Feature[];
+}
+
+// Testimonials Section
+export interface Testimonial {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  avatar: string;
+  rating?: number;
+}
+
+export interface TestimonialCardProps extends BaseProps {
+  testimonial: Testimonial;
+}
+
+export interface TestimonialsSectionProps extends BaseProps {
+  title: string;
+  subtitle: string;
+  testimonials: Testimonial[];
 }
