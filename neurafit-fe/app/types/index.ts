@@ -71,3 +71,52 @@ export interface TestimonialsSectionProps extends BaseProps {
   subtitle: string;
   testimonials: Testimonial[];
 }
+
+// CTA Section
+export interface CTASectionProps extends BaseProps {
+  headline: string;
+  description: string;
+  primaryCtaText: string;
+  primaryCtaLink: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  backgroundImage?: string;
+}
+
+// Footer Section
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterLinkGroup {
+  title: string;
+  links: FooterLink[];
+}
+
+export interface SocialLink {
+  platform: string;
+  href: string;
+  icon: LucideIcon;
+}
+
+export interface FooterSectionProps extends BaseProps {
+  logoText: string;
+  tagline: string;
+  linkGroups: FooterLinkGroup[];
+  socialLinks: SocialLink[];
+  copyrightText: string;
+}
+
+// Navigation
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+export interface NavbarProps extends BaseProps {
+  logoText: string;
+  navItems: NavItem[];
+  ctaText: string;
+  ctaLink: string;
+}
