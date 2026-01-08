@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { HeroSectionProps } from "../types";
 import { ArrowRight, Play } from "lucide-react";
+import { HeroSectionProps } from "../types";
 
 export default function HeroSection({
   headline,
@@ -19,13 +19,13 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section
-      className={relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-primary-950 ${className}}
+      className={`relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-blue-950 ${className}`}
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200/30 dark:bg-primary-500/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary-200/30 dark:bg-secondary-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent-200/20 dark:bg-accent-500/5 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200/30 dark:bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/30 dark:bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-200/20 dark:bg-pink-500/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
@@ -42,9 +42,9 @@ export default function HeroSection({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6"
             >
-              <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               AI-Powered Fitness Platform
             </motion.div>
 
@@ -59,7 +59,7 @@ export default function HeroSection({
                   className={
                     word.toLowerCase() === "ai" ||
                     word.toLowerCase() === "neurafit"
-                      ? "bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent"
+                      ? "bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
                       : ""
                   }
                 >
@@ -87,7 +87,7 @@ export default function HeroSection({
             >
               <Link
                 href={ctaLink}
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-full shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 transform hover:-translate-y-1"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-full shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1"
               >
                 {ctaText}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -96,9 +96,9 @@ export default function HeroSection({
               {secondaryCtaText && secondaryCtaLink && (
                 <Link
                   href={secondaryCtaLink}
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 font-semibold rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-primary-300 dark:hover:border-primary-600 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all duration-300"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 font-semibold rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all duration-300"
                 >
-                  <Play className="w-5 h-5 text-primary-500" />
+                  <Play className="w-5 h-5 text-blue-500" />
                   {secondaryCtaText}
                 </Link>
               )}
@@ -117,7 +117,7 @@ export default function HeroSection({
                 { value: "4.9", label: "App Rating" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400">
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">
                     {stat.value}
                   </div>
                   <div className="text-sm text-neutral-500 dark:text-neutral-400">
@@ -138,11 +138,11 @@ export default function HeroSection({
             <div className="relative aspect-square max-w-lg mx-auto lg:max-w-none">
               {/* Decorative rings */}
               <div
-                className="absolute inset-0 rounded-full border-2 border-dashed border-primary-200 dark:border-primary-800 animate-spin-slow"
+                className="absolute inset-0 rounded-full border-2 border-dashed border-blue-200 dark:border-blue-800 animate-spin"
                 style={{ animationDuration: "20s" }}
               />
               <div
-                className="absolute inset-4 rounded-full border-2 border-dashed border-secondary-200 dark:border-secondary-800 animate-spin-slow"
+                className="absolute inset-4 rounded-full border-2 border-dashed border-purple-200 dark:border-purple-800 animate-spin"
                 style={{
                   animationDuration: "15s",
                   animationDirection: "reverse",
@@ -150,7 +150,7 @@ export default function HeroSection({
               />
 
               {/* Main image container */}
-              <div className="absolute inset-8 rounded-3xl overflow-hidden bg-gradient-to-br from-primary-400 to-secondary-400 p-1">
+              <div className="absolute inset-8 rounded-3xl overflow-hidden bg-gradient-to-br from-blue-400 to-purple-400 p-1">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white dark:bg-neutral-900">
                   <Image
                     src={heroImage}
@@ -170,8 +170,8 @@ export default function HeroSection({
                 className="absolute -left-4 top-1/4 bg-white dark:bg-neutral-800 rounded-2xl p-4 shadow-xl"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-success-500/20 flex items-center justify-center">
-                    <span className="text-success-500 text-lg">✓</span>
+                  <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-500 text-lg">✓</span>
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-neutral-900 dark:text-white">
@@ -191,8 +191,8 @@ export default function HeroSection({
                 className="absolute -right-4 bottom-1/4 bg-white dark:bg-neutral-800 rounded-2xl p-4 shadow-xl"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
-                    <span className="text-accent-500 text-lg">🔥</span>
+                  <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
+                    <span className="text-orange-500 text-lg">🔥</span>
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-neutral-900 dark:text-white">
@@ -219,7 +219,7 @@ export default function HeroSection({
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-start justify-center p-2"
         >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-primary-500" />
+          <motion.div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
         </motion.div>
       </motion.div>
     </section>

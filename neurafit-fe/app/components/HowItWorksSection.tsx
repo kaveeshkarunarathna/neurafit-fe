@@ -11,7 +11,7 @@ export default function HowItWorksSection({
 }: HowItWorksSectionProps) {
   return (
     <section
-      className={py-20 sm:py-28 lg:py-32 bg-white dark:bg-neutral-950 overflow-hidden ${className}}
+      className={`py-20 sm:py-28 lg:py-32 bg-white dark:bg-neutral-950 overflow-hidden ${className}`}
       id="how-it-works"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +27,7 @@ export default function HowItWorksSection({
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 rounded-full bg-secondary-100 dark:bg-secondary-900/50 text-secondary-700 dark:text-secondary-300 text-sm font-medium mb-4"
+            className="inline-block px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 text-sm font-medium mb-4"
           >
             How It Works
           </motion.span>
@@ -42,7 +42,7 @@ export default function HowItWorksSection({
         {/* Steps */}
         <div className="relative">
           {/* Connection line - Desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-200 via-secondary-200 to-accent-200 dark:from-primary-800 dark:via-secondary-800 dark:to-accent-800 -translate-y-1/2 rounded-full" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 dark:from-blue-800 dark:via-purple-800 dark:to-pink-800 -translate-y-1/2 rounded-full" />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
             {steps.map((step, index) => {
@@ -61,11 +61,11 @@ export default function HowItWorksSection({
                     {/* Step Number Circle */}
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center mb-6 shadow-lg shadow-primary-500/25 group-hover:shadow-xl group-hover:shadow-primary-500/30 transition-all duration-300"
+                      className="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/25 group-hover:shadow-xl group-hover:shadow-blue-500/30 transition-all duration-300"
                     >
                       <Icon className="w-8 h-8 text-white" />
                       {/* Step number badge */}
-                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">
                         {step.stepNumber}
                       </div>
                     </motion.div>
@@ -85,7 +85,7 @@ export default function HowItWorksSection({
                       <motion.svg
                         animate={{ y: [0, 5, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
-                        className="w-6 h-6 text-primary-400"
+                        className="w-6 h-6 text-blue-400"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -120,7 +120,7 @@ export default function HowItWorksSection({
             href="#cta"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Start Your Journey
             <svg
