@@ -108,7 +108,8 @@ export default function HomePage() {
         "NeuraFiT transformed my fitness journey. The AI coaching helped me fix my form and the adaptive workouts kept me challenged.",
       author: "Sarah Johnson",
       role: "Fitness Enthusiast",
-      avatar: "/avatars/sarah.jpg",
+      avatar:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&q=80",
       rating: 5,
     },
     {
@@ -117,7 +118,8 @@ export default function HomePage() {
         "The nutrition planning feature is incredible. It adjusted my meal plans based on my progress—exactly what I needed.",
       author: "Mike Chen",
       role: "Professional Athlete",
-      avatar: "/avatars/mike.jpg",
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&q=80",
       rating: 5,
     },
     {
@@ -126,7 +128,8 @@ export default function HomePage() {
         "Best fitness app I've used. The real-time pose feedback prevents injuries and the analytics dashboard keeps me motivated.",
       author: "Emma Rodriguez",
       role: "Personal Trainer",
-      avatar: "/avatars/emma.jpg",
+      avatar:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face&q=80",
       rating: 5,
     },
   ];
@@ -183,7 +186,7 @@ export default function HomePage() {
         ctaLink="/assessment"
         secondaryCtaText="Explore platform features"
         secondaryCtaLink="#features"
-        heroImage="/hero-image.jpg"
+        heroImage="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=800&fit=crop&q=80"
         heroImageAlt="NeuraFiT Dashboard"
       />
 
